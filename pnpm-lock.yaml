@@ -92,7 +92,7 @@ importers:
         specifier: workspace:*
         version: link:../../packages/tsconfig
       typescript:
-        specifier: ^4.5.3
+        specifier: ^4.9.5
         version: 4.9.5
 
   packages/eslint-config-custom:
@@ -116,10 +116,14 @@ importers:
         specifier: ^1.10.12
         version: 1.10.12(eslint@8.48.0)
       typescript:
-        specifier: ^4.5.3
+        specifier: ^4.9.5
         version: 4.9.5
 
-  packages/tsconfig: {}
+  packages/tsconfig:
+    devDependencies:
+      '@tsconfig/strictest':
+        specifier: ^2.0.2
+        version: 2.0.2
 
   packages/ui:
     devDependencies:
@@ -145,7 +149,7 @@ importers:
         specifier: workspace:*
         version: link:../tsconfig
       typescript:
-        specifier: ^4.5.2
+        specifier: ^4.9.5
         version: 4.9.5
 
 packages:
@@ -654,6 +658,10 @@ packages:
 
   /@tsconfig/node16@1.0.4:
     resolution: {integrity: sha512-vxhUy4J8lyeyinH7Azl1pdd43GJhZH/tP2weN8TntQblOY+A0XbT8DJk1/oCPuOOyg/Ja757rG0CgHcWC8OfMA==}
+    dev: true
+
+  /@tsconfig/strictest@2.0.2:
+    resolution: {integrity: sha512-jt4jIsWKvUvuY6adJnQJlb/UR7DdjC8CjHI/OaSQruj2yX9/K6+KOvDt/vD6udqos/FUk5Op66CvYT7TBLYO5Q==}
     dev: true
 
   /@turbo/gen@1.10.12(@types/node@20.5.2)(typescript@4.9.5):
