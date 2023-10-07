@@ -1,3 +1,4 @@
 module.exports = {
-  extends: ["custom/react-internal"],
-};
+  extends: ["custom/library"],
+  ignorePatterns: [".eslintrc.js"],
+}

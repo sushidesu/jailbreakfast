@@ -1,21 +1,9 @@
-const { resolve } = require("node:path");
+const { resolve } = require("node:path")
 
-const project = resolve(process.cwd(), "tsconfig.json");
-
-/*
- * This is a custom ESLint configuration for use with
- * typescript packages.
- *
- * This config extends the Vercel Engineering Style Guide.
- * For more information, see https://github.com/vercel/style-guide
- *
- */
+const project = resolve(process.cwd(), "tsconfig.json")
 
 module.exports = {
-  extends: [
-    "@vercel/style-guide/eslint/node",
-    "@vercel/style-guide/eslint/typescript",
-  ].map(require.resolve),
+  extends: ["./base"].map(require.resolve),
   parserOptions: {
     project,
   },
@@ -31,4 +19,4 @@ module.exports = {
     },
   },
   ignorePatterns: ["node_modules/", "dist/"],
-};
+}
